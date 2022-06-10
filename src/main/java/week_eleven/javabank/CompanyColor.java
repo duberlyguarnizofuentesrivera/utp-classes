@@ -1,20 +1,16 @@
 package week_eleven.javabank;
 public final class CompanyColor {
 
-   private final int R = 238;
-   private final int G = 130;
-   private final int B = 238;
-
    public int getR() {
-      return R;
+      return 238;
    }//end method getR
 
    public int getG() {
-      return G;
+      return 130;
    }//end method getG
 
    public int getB() {
-      return B;
+      return 238;
    }//end method getB
 
 }//end class CompanyColor
