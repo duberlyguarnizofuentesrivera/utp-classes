@@ -1,9 +1,11 @@
+package week_eleven.javabank;
 
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.border.*;
-import java.util.*; 
+import javax.swing.border.TitledBorder;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
  
 public class JavaBankArrayListDelete extends JFrame {
@@ -256,7 +258,7 @@ public class JavaBankArrayListDelete extends JFrame {
             
        if ((name != "") & (accountNum != 0))  {
            //add a new account to the list using the Account constructor
-           accounts.add(new Account(name,accountNum,balance));
+           accounts.add(new Account(name,accountNum,balance, AccountType.SAVINGS));
            //Set a temp Account for display purposes
            Account tempAccount = (Account)accounts.get(accounts.size()-1);
            //Display tempAccount

@@ -1,3 +1,4 @@
+package week_eleven.javabank;
 public final class CompanyColor {
 
    private final int R = 238;

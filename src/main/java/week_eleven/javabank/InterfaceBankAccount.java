@@ -1,3 +1,4 @@
+package week_eleven.javabank;
 public interface InterfaceBankAccount
 {
    public final String BANK= "JavaBank";

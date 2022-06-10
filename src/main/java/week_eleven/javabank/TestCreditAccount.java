@@ -1,12 +1,12 @@
-
+package week_eleven.javabank;
 public class TestCreditAccount {
 	
 	public static void main(String[] args) {
 	     
 		// Instantiate 3 accounts using constructor with values
-	    Account a1 = new Account("Sanjay Gupta",11556,300);
-		Account a2 = new Account("He Xai",22338,500);
-		Account a3 = new Account("Ilya Mustafana",44559,1000);
+	    Account a1 = new Account("Sanjay Gupta",11556,300, AccountType.SAVINGS);
+		Account a2 = new Account("He Xai",22338,500, AccountType.CREDIT);
+		Account a3 = new Account("Ilya Mustafana",44559,1000, AccountType.CREDIT);
 		
 		// Instantiate 2 credit accounts
 		// Using constructor with values which will call constructor from super

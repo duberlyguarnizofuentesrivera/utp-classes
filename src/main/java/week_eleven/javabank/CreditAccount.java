@@ -1,4 +1,4 @@
-
+package week_eleven.javabank;
 public class CreditAccount extends AbstractBankAccount{
 
 	// Instance Fields
