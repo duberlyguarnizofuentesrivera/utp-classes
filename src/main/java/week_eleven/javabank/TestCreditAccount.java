@@ -10,8 +10,8 @@ public class TestCreditAccount {
 		
 		// Instantiate 2 credit accounts
 		// Using constructor with values which will call constructor from super
-		CreditAccount c1 = new CreditAccount("A.N Other", 88776, 500);
-		CreditAccount c2 = new CreditAccount("Another",66778,1000,500);
+		CreditAccount c1 = new CreditAccount("A.N Other", 88776, 500, AccountType.CREDIT);
+		CreditAccount c2 = new CreditAccount("Another",66778,1000,500, AccountType.CREDIT);
 
 		// Print accounts
 		//a1.print();

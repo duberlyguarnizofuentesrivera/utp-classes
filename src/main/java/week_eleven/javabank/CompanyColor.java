@@ -2,15 +2,15 @@ package week_eleven.javabank;
 public final class CompanyColor {
 
    public int getR() {
-      return 238;
+      return 166;
    }//end method getR
 
    public int getG() {
-      return 130;
+      return 118;
    }//end method getG
 
    public int getB() {
-      return 238;
+      return 140;
    }//end method getB
 
 }//end class CompanyColor

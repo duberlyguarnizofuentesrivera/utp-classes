@@ -9,7 +9,6 @@ public class Account extends AbstractBankAccount {
     //constructor for Account
     Account(String name, int num, int amt, AccountType type) {
         super(name, num, amt + calculateInitialBonusValue(amt));
-        bonusValue = 0;
         this.bonusValue = calculateInitialBonusValue(amt);
         this.accountType = type;
     }//end constructor method

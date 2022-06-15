@@ -10,7 +10,7 @@ import java.util.ArrayList;
  
 public class JavaBankArrayListDelete extends JFrame {
 
-	private static final long serialVersionUID = 1L;
+	//private static final long serialVersionUID = 1L
 	// Make these variables publicly available
     public String name;
     public int accountNum;
