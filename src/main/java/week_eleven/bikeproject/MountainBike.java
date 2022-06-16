@@ -17,6 +17,7 @@ public class MountainBike extends Bike implements MountainParts {
         this.frameSize = frameSize;
     }//end constructor
 
+    @Override
     public String toString() {
         return (super.toString()
                 + "\nThis mountain bike is a "

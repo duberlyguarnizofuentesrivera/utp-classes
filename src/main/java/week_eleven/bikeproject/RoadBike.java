@@ -19,6 +19,7 @@ public class RoadBike extends Bike implements RoadParts {
         this.postHeight = postHeight;
     }//end constructor
 
+    @Override
     public String toString() {
         return (super.toString()
                 + "\nThis Roadbike"

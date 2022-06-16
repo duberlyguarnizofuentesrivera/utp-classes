@@ -1,16 +1,16 @@
 package week_eleven.bikeproject;
 
-public class Bike implements BikeParts{
+public class Bike implements BikeParts {
 
     private String handleBars;
     private String frame;
     private String tyres;
     private String seatType;
     private int numGears;
-    private final String make;
+    private final String maker;
 
-    public Bike(){
-        this.make = "Oracle Cycles";
+    public Bike() {
+        this.maker = "Oracle Cycles";
     }//end constructor
 
     public Bike(String handleBars, String frame, String tyres, String seatType, int numGears) {
@@ -19,12 +19,11 @@ public class Bike implements BikeParts{
         this.tyres = tyres;
         this.seatType = seatType;
         this.numGears = numGears;
-        this.make = "Oracle Cycles";
+        this.maker = "Oracle Cycles";
     }//end constructor
 
-    public String toString()
-    {
-        return ("\n" + this.make + "\n"
+    public String toString() {
+        return ("\n" + this.maker + "\n"
                 + "This bike has " + this.handleBars + " handlebars on a "
                 + this.frame + " frame with " + this.numGears + " gears."
                 + "\nIt has a " + this.seatType + " seat with " + this.tyres + " tyres.");
