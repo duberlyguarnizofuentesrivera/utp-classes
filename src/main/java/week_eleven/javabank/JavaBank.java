@@ -5,6 +5,7 @@ import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Objects;
 
@@ -47,7 +48,8 @@ public class JavaBank extends JFrame {
 
     // two-dimensional array to store Account details
 
-    private final AbstractBankAccount[] myAccounts = new AbstractBankAccount[MAX_ACCOUNTS];
+    //private final AbstractBankAccount[] myAccounts = new AbstractBankAccount[MAX_ACCOUNTS];
+    ArrayList<AbstractBankAccount> myAccounts = new ArrayList<>();
 
     private int noAccounts = 0;
 
@@ -282,14 +284,15 @@ public class JavaBank extends JFrame {
 
         if ((noAccounts <= 9) && (!Objects.equals(name, "")) && (accountNum != 0)) {
             if (actType == AccountType.SAVINGS) {
-                myAccounts[noAccounts] = new Account(name, accountNum, balance, actType);
+                myAccounts.add(new Account(name, accountNum, balance, actType));
+
             } else {
                 //no hay instrucciones para calcular el crédito disponible por cuenta, así que se crea con
                 //el primer constructor.
-                myAccounts[noAccounts] = new CreditAccount(name, accountNum, balance, actType);
+                myAccounts.add(new CreditAccount(name, accountNum, balance, actType));
             }
             accountNames[noAccounts] = "USED";
-            displayAccountDetails(myAccounts[noAccounts]);
+            displayAccountDetails(myAccounts.get(noAccounts));
             noAccounts++;
             System.out.println(noAccounts);
         } else {
@@ -326,14 +329,14 @@ public class JavaBank extends JFrame {
                 int withdraw = Integer.parseInt(withdrawJTextField.getText());
 
                 for (int i = 0; i < noAccounts; i++) {
-                    if ((myAccounts[i].getAccountNum() == accountNumber) && (deposit > 0)) {
-                        myAccounts[i].setBalance(myAccounts[i].getBalance() + deposit);
-                        displayAccountDetails(myAccounts[i]);
+                    if ((myAccounts.get(i).getAccountNum() == accountNumber) && (deposit > 0)) {
+                        myAccounts.get(i).setBalance(myAccounts.get(i).getBalance() + deposit);
+                        displayAccountDetails(myAccounts.get(i));
                     }//endif
 
-                    if ((myAccounts[i].getAccountNum() == accountNumber) && (withdraw > 0)) {
-                        myAccounts[i].setBalance(myAccounts[i].getBalance() - withdraw);
-                        displayAccountDetails(myAccounts[i]);
+                    if ((myAccounts.get(i).getAccountNum() == accountNumber) && (withdraw > 0)) {
+                        myAccounts.get(i).setBalance(myAccounts.get(i).getBalance() - withdraw);
+                        displayAccountDetails(myAccounts.get(i));
                     }
                 }
             } catch (NumberFormatException | InputMismatchException e) {
@@ -365,7 +368,7 @@ public class JavaBank extends JFrame {
             displayJTextArea.setText("No Accounts currently created");
         } else {
             for (int i = 0; i < noAccounts; i++) {
-                displayJTextArea.append(myAccounts[i].toString());
+                displayJTextArea.append(myAccounts.get(i).toString());
             }//endfor
         }//endif
 
